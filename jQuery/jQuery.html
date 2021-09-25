@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+
+    <body></body>
+
+    <script>
+        $(document).ready(function(){//when using jquery methods, $ = jquery
+            $("html").append(//using a \ will continue the quotes to the next level as seen below
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+//when the document is loaded(ready) grab the above function and use the html tag to append(add) what we typed above to the document
+
+            );
+            $("#2").css( {'color':'red'} );//# indicates id
+            $('#3').click(function() {//calling paragraph 3, when clicked on activate the inside function to hide our h1
+                $('h1').hide();
+            });
+
+            $( "p" ).click(function() {
+    console.log( "clickclick" );
+});
+
+$( "#1" ).fadeOut( 1500 );
+        });
+
+    </script>
+</html>
